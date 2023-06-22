@@ -16,9 +16,8 @@ export default {
     }
   },
   mounted() {
-    axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=5').then((response) => {
+    axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=12').then((response) => {
       this.store.pokemons = response.data.docs;
-      console.log(this.store.pokemons);
     })
   },
 }
@@ -38,7 +37,8 @@ export default {
 
 .background-color {
   background-color: rgb(183, 27, 27);
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 </style>
