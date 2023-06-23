@@ -16,15 +16,10 @@ export default {
     }
   },
   mounted() {
-    this.filterPokemon();
-  },
-  methods: {
-    filterPokemon() {
-      axios.get(`https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?' + ${store.searchType}`).then((response) => {
-      this.store.pokemons = response.data.docs;
-      console.log(store.searchType)
+    axios.get(`https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=12`).then((response) => {
+    this.store.pokemons = response.data.docs;
+    console.log(store.searchType)
     })
-    }
   },
 }
 </script>
