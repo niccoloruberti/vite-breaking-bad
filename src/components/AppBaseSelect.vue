@@ -1,17 +1,22 @@
 <script>
+import { store } from '../store';
+
 export default {
-    
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
 <template lang="">
-    <div>
-        <select>
+        <select class="form-select w-25" >
             <option value="" default>Seleziona un tipo</option>
+            <option v-for="elem in store.types" :value="elem">{{ elem }}</option>
         </select>
-    </div>
 </template>
 
-<style lang="">
+<style lang="scss">
     
 </style>

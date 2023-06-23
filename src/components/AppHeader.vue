@@ -1,10 +1,16 @@
 <script>
 import AppBaseSelect from './AppBaseSelect.vue';
+import { store } from '../store';
 
 export default {
     components: {
         AppBaseSelect,
-    }
+    },
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
@@ -23,9 +29,7 @@ export default {
         <div class="row">
             <div class="col-12">
                 <div class="content d-flex justify-content-end">
-                    <select class="form-select w-25">
-                        <option value="" default>Seleziona un tipo</option>
-                    </select>
+                    <AppBaseSelect v-model="store.searchType" @keyup.change="$emit('type')" />
                 </div>
             </div>
         </div>
