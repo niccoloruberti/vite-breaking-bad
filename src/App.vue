@@ -8,7 +8,7 @@ import axios from 'axios';
 export default {
   components: {
     AppHeader,
-    AppPokemonList
+    AppPokemonList,
   },
   data() {
     return {

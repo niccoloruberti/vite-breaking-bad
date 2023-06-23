@@ -1,6 +1,10 @@
 <script>
+import AppBaseSelect from './AppBaseSelect.vue';
+
 export default {
-    
+    components: {
+        AppBaseSelect,
+    }
 }
 </script>
 
@@ -13,6 +17,15 @@ export default {
                     <div class="little-circle mx-2 red"></div>
                     <div class="little-circle mx-2 yellow"></div>
                     <div class="little-circle mx-2 green"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="content d-flex justify-content-end">
+                    <select class="form-select w-25">
+                        <option value="" default>Seleziona un tipo</option>
+                    </select>
                 </div>
             </div>
         </div>
