@@ -29,7 +29,7 @@ export default {
         <div class="row">
             <div class="col-12">
                 <div class="content d-flex justify-content-end">
-                    <AppBaseSelect v-model="store.searchType" @keyup.change="$emit('type')" />
+                    <AppBaseSelect/>
                 </div>
             </div>
         </div>

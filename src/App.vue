@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     filterPokemon() {
-      axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?' + `${store.searchType}`).then((response) => {
+      axios.get(`https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?' + ${store.searchType}`).then((response) => {
       this.store.pokemons = response.data.docs;
       console.log(store.searchType)
     })
@@ -32,7 +32,7 @@ export default {
 <template lang="">
 
 <div class="background-color">
-  <AppHeader @type="filterPokemon"/>
+  <AppHeader />
   <AppPokemonList />
 </div>
 
